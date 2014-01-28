@@ -25,7 +25,7 @@ public void drawMe(boolean selectedRobot) {
    
    x1 = centerX + r * cos(recAngle+getRobotAngle());
    y1 = centerY + r * sin(recAngle+getRobotAngle());
-   
+    
    x2 = centerX + r * cos(PI-recAngle+getRobotAngle());
    y2 = centerY + r * sin(PI-recAngle+getRobotAngle());
    
@@ -52,9 +52,6 @@ public void drawMe(boolean selectedRobot) {
    
    setY(getY() + y*sin(getRobotAngle())*1.5); 
    setX(getX() + y*cos(getRobotAngle())*1.5);
-   
-   
-   //println(x + " " + y);
   
    
  }

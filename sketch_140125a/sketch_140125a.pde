@@ -31,6 +31,8 @@ void setup() {
   robots[3] = new FRCRobot(2,150,50);
   robots[4] = new FRCRobot(2,150,150);
   robots[5] = new FRCRobot(2,150,250);
+  
+  //robots[0].storeRobots(robots);
 }
  
 void draw() {

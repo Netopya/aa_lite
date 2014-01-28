@@ -4,13 +4,14 @@ class FRCRobot {
   float turrentAngle;
   float turrentLength;
   float robotAngle;
-  int robotWidth,robotHeight;
+  float robotWidth,robotHeight;
   int outlineCount;
   boolean selectedRobot;
   float velocity;
   final static float MAXVELOCITY = 1.5;
   float headingX;
   int direction;
+  FRCRobot[] robots;
   
  public FRCRobot() {
    
@@ -28,6 +29,10 @@ class FRCRobot {
    outlineCount = 0;
    velocity=0;
    direction=0;
+ }
+ 
+ public void storeRobots(FRCRobot[] robots) {
+   this.robots = robots;
  }
  
  public float getX() {
@@ -62,8 +67,13 @@ class FRCRobot {
    this.y = y;
  }
  
+ public void setWidth(float robotWidth) {
+   this.robotWidth = robotWidth;
+ }
  
- 
+ public void setHeight(float robotHeight) {
+   this.robotHeight = robotHeight;
+ }
  
   
  public void drawMe(boolean selectedRobot) {

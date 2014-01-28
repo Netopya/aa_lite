@@ -38,6 +38,22 @@ class FRCRobot {
    return y; 
  }
  
+ public float getRobotAngle() {
+  return  robotAngle;
+ }
+ 
+ public float getRobotWidth() {
+   return robotWidth; 
+ }
+ 
+ public float getRobotHeight() {
+   return robotHeight;
+ }
+ 
+ public int getAlliance() {
+  return alliance; 
+ }
+ 
  public void setX(float x) {
    this.x = x;
  }
@@ -45,10 +61,14 @@ class FRCRobot {
  public void setY(float y) {
    this.y = y;
  }
+ 
+ 
+ 
+ 
   
  public void drawMe(boolean selectedRobot) {
    
-   outlineLogic();
+   outlineLogic(selectedRobot);
    noStroke();
    
    if(alliance == 1) {
@@ -131,7 +151,7 @@ class FRCRobot {
    robotAngle += 2*direction*PI/180;
  }
 
-public void outlineLogic() {
+public void outlineLogic(boolean selectedRobot) {
   if(this.selectedRobot != selectedRobot){
      outlineCount = 0;
      this.selectedRobot = selectedRobot;

@@ -50,7 +50,6 @@ void draw() {
     case NORTH|WEST: robot1.move(-moveRate,-moveRate); break;
     case SOUTH|EAST: robot1.move(moveRate,moveRate); break;
     case SOUTH|WEST: robot1.move(-moveRate,moveRate); break;
-    default: robot1.move(0,0);
   }
   
   switch(keyTurn) {

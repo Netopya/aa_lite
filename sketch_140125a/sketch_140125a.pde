@@ -72,13 +72,14 @@ void draw() {
 void keyPressed(){
   switch(key) {
     case('w'):case('W'):keyDirection |=NORTH;break;
-    case('d'):case('D'):keyDirection |=EAST;break;
+    case('f'):case('F'):case('d'):case('D'):keyDirection |=EAST;break;
     case('s'):case('S'):keyDirection |=SOUTH;break;
-    case('a'):case('A'):keyDirection |=WEST;break;
+    case('r'):case('R'):case('a'):case('A'):keyDirection |=WEST;break;
     case('k'):case('K'):keyTurn |=COUNTERCLOCKWISE;break;
     case('l'):case('L'):keyTurn |=CLOCKWISE;break;
     case('i'):case('I'):switchBot(-1);break;
     case('o'):case('O'):switchBot(1);break;
+    
   }
   
   
@@ -87,9 +88,9 @@ void keyPressed(){
 void keyReleased(){  
   switch(key) {
     case('w'):case('W'):keyDirection ^=NORTH;break;
-    case('d'):case('D'):keyDirection ^=EAST;break;
+    case('f'):case('F'):case('d'):case('D'):keyDirection ^=EAST;break;
     case('s'):case('S'):keyDirection ^=SOUTH;break;
-    case('a'):case('A'):keyDirection ^=WEST;break;
+    case('r'):case('R'):case('a'):case('A'):keyDirection ^=WEST;break;
     case('k'):case('K'):keyTurn ^=COUNTERCLOCKWISE;break;
     case('l'):case('L'):keyTurn ^=CLOCKWISE;break;
   }

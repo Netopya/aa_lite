@@ -3,6 +3,20 @@ class TankRobot extends FRCRobot {
       super(alliance,x,y); 
       
    }
+   
+   public void move(int x,int y) {
+   
+   super.turnRobot(x);
+   
+   setY(getY() + y*sin(getRobotAngle())*1.5); 
+   setX(getX() + y*cos(getRobotAngle())*1.5);
+  
+   
+ }
+ 
+ public void turnRobot(float direction) {
+ 
+ }
    /*
    vertex(x1,y1);
       
